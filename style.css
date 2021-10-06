@@ -1,0 +1,60 @@
+.container
+{
+	display: grid;
+	grid-template-areas: 'output'
+						 'input';
+	min-width: 20em;
+	max-width: 35em;
+	grid-gap: 0.5em;
+}
+
+.display
+{
+	grid-area: output;
+	height: 100px;
+	width: 100%;
+	background-color: #333;
+	color: #fff;
+	text-align: right;
+	font-size: 3em;
+	padding-top: 1em;
+}
+
+.inputs
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-area: input;
+	width: 100%;
+	background-color: #333;
+	border: solid #333 0.1em;
+}
+
+.inputs div
+{
+	height: 50px;
+	color: #fff;
+	text-align: center;
+	padding-top: 1em;
+	border: solid #333 0.1em;
+	user-select: none;
+	font-size: 1.5em;
+}
+
+.inputs div:hover
+{
+	animation: outline 1s linear;
+	cursor: pointer;
+}
+
+.function
+{
+	background-color: #F8D658;
+}
+
+@keyframes outline
+{
+	0%{border: solid #333 0.1em;}
+	50%{border: solid #fff 0.1em;}
+	100%{border: solid #333 0.1em;}
+}
