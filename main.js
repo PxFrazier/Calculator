@@ -12,11 +12,12 @@ document.getElementById('equals').addEventListener('click', ()=>{
 });
 document.getElementById('clearEntry').addEventListener('click', ()=>{
     element = '';
-    display.innerText = '';
+    display.innerText = `${query}${element}`;
 });
 document.getElementById('clearOutput').addEventListener('click', ()=>{
     display.innerText = '';
     query = '';
+    element = '';
 });
 document.getElementById('negative').addEventListener('click', ()=>{
     if(element == '') element += '-';
