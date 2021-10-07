@@ -22,8 +22,9 @@ document.getElementById('clearOutput').addEventListener('click', ()=>{
 document.getElementById('negative').addEventListener('click', ()=>{
     if(element == '') element += '-';
     else element += '(-';
-
-    display.innerText += element;
+    query += element;
+    display.innerText = query;
+    element = '';
 });
 document.getElementById('sqrt').addEventListener('click', ()=>{
     display.innerText = Math.sqrt(parseFloat(display.innerText));
@@ -46,14 +47,6 @@ operators.forEach((entry)=>{
         display.innerText += entry.innerText;
     });
 });
-
-
-
-
-
-
-
-
 
 
 
